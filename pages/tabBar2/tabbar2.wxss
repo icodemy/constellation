@@ -1,0 +1,31 @@
+/* pages/tabBar2/tabbar2.wxss */
+.desc {
+  height: 85rpx;
+  line-height: 85rpx;
+  color: #1296db;
+  font-weight: bold;
+  padding-left: 40rpx;
+}
+.p-con {
+  /* background-color: aqua; */
+  height: 100rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.p-item {
+  line-height: 100rpx;
+}
+
+/* i-panel{
+  color:#1296db
+} */
+
+.line{
+  height: 15rpx;
+}
+
+i-card {
+  color: #1296db;
+}

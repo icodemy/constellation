@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/tabBar1/tabbar1",
+    "pages/tabBar2/tabbar2",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1296db",
+    "navigationBarTitleText": "星座",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "position": "bottom",
+    "color": "#8a8a8a",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "星座首页",
+        "iconPath": "img/tabBar/index.png",
+        "selectedIconPath": "img/tabBar/index1.png"
+      },
+      {
+        "pagePath": "pages/tabBar1/tabbar1",
+        "text": "星座运势",
+        "iconPath": "img/tabBar/t00.png",
+        "selectedIconPath": "img/tabBar/t01.png"
+      },
+      {
+        "pagePath": "pages/tabBar2/tabbar2",
+        "text": "星座匹配",
+        "iconPath": "img/tabBar/t10.png",
+        "selectedIconPath": "img/tabBar/t11.png"
+      }
+    ]
+  }
+}

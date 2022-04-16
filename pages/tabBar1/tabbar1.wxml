@@ -1,0 +1,229 @@
+<!--pages/tabBar1/tabbar1.wxml-->
+<view>
+  <i-tabs current="{{ current }}" bindchange="handleChange">
+    <i-tab key="today" title="今日"></i-tab>
+    <i-tab key="tomorrow" title="明日"></i-tab>
+    <i-tab key="week" title="本周"></i-tab>
+    <i-tab key="month" title="本月"></i-tab>
+    <i-tab key="year" title="本年"></i-tab>
+  </i-tabs>
+
+  <!-- 星座选择器 -->
+  <view class="line"></view>
+  
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" header-text="请选择要查看的星座">
+    <i-card title="当前星座" extra="切换星座 >">
+      <view slot="content">
+        {{array[index]}}
+      </view>
+    </i-card>
+  </picker>
+
+
+  <view class="line"></view>
+  <view class="line"></view>
+  <view class="line"></view>
+
+  <view wx:if="{{current === 'today'}}">
+    <i-divider color="#2d8cf0" lineColor="#2d8cf0">今日运势</i-divider>
+
+    <i-card title="星座名称">
+      <view slot="content">{{Data.name}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="今日日期">
+      <view slot="content">{{Data.datetime}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="幸运颜色">
+      <view slot="content">{{Data.color}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="综合指数">
+      <view slot="content">{{Data.all}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="健康指数">
+      <view slot="content">{{Data.health}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="爱情指数">
+      <view slot="content">{{Data.love}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="财运指数">
+      <view slot="content">{{Data.money}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="幸运数字">
+      <view slot="content">{{Data.number}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="速配星座">
+      <view slot="content">{{Data.QFriend}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="工作指数">
+      <view slot="content">{{Data.work}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="今日概述">
+      <view slot="content">{{Data.summary}}</view>
+    </i-card>
+    <view class="line"></view>
+  </view>
+
+
+
+  <view wx:if="{{current === 'tomorrow'}}">
+    <i-divider color="#2d8cf0" lineColor="#2d8cf0">明日运势</i-divider>
+
+    <i-card title="星座名称">
+      <view slot="content">{{Data.name}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="明日日期">
+      <view slot="content">{{Data.datetime}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="幸运颜色">
+      <view slot="content">{{Data.color}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="综合指数">
+      <view slot="content">{{Data.all}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="健康指数">
+      <view slot="content">{{Data.health}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="爱情指数">
+      <view slot="content">{{Data.love}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="财运指数">
+      <view slot="content">{{Data.money}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="幸运数字">
+      <view slot="content">{{Data.number}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="速配星座">
+      <view slot="content">{{Data.QFriend}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="工作指数">
+      <view slot="content">{{Data.work}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="明日概述">
+      <view slot="content">{{Data.summary}}</view>
+    </i-card>
+    <view class="line"></view>
+  </view>
+
+
+  <view wx:if="{{current === 'week'}}">
+    <i-divider color="#2d8cf0" lineColor="#2d8cf0">本周运势</i-divider>
+
+    <i-card title="星座名称">
+      <view slot="content">{{Data.name}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="本周日期范围">
+      <view slot="content">{{Data.date}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="本周周数">
+      <view slot="content">{{Data.weekth}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="健康方面">
+      <view slot="content">{{Data.health}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="职场方面">
+      <view slot="content">{{Data.job}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="爱情方面">
+      <view slot="content">{{Data.love}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="财运方面">
+      <view slot="content">{{Data.money}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="工作方面">
+      <view slot="content">{{Data.work}}</view>
+    </i-card>
+    <view class="line"></view>
+  </view>
+
+  <view wx:if="{{current === 'month'}}">
+    <i-divider color="#2d8cf0" lineColor="#2d8cf0">本月运势</i-divider>
+
+    <i-card title="星座名称">
+      <view slot="content">{{Data.name}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="本月日期">
+      <view slot="content">{{Data.date}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="综合运势">
+      <view slot="content">{{Data.all}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="健康运势">
+      <view slot="content">{{Data.health}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="爱情运势">
+      <view slot="content">{{Data.love}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="财运方面">
+      <view slot="content">{{Data.money}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="工作运势">
+      <view slot="content">{{Data.work}}</view>
+    </i-card>
+    <view class="line"></view>
+  </view>
+  <view wx:if="{{current === 'year'}}">
+    <i-divider color="#2d8cf0" lineColor="#2d8cf0">本年运势</i-divider>
+
+    <i-card title="星座名称">
+      <view slot="content">{{Data.name}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="年份">
+      <view slot="content">{{Data.date}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="感情运">
+      <view slot="content">{{Data.love}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="财运">
+      <view slot="content">{{Data.finance}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="事业运">
+      <view slot="content">{{Data.career}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="年度密码-概述">
+      <view slot="content">{{Data.mima.info}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="年度密码-说明">
+      <view slot="content">{{Data.mima.text}}</view>
+    </i-card>
+    <view class="line"></view>
+  </view>
+</view>

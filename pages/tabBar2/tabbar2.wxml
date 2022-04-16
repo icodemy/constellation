@@ -1,0 +1,75 @@
+<!--pages/tabBar2/tabbar2.wxml-->
+<view>
+  <view class="desc">请选择匹配双方的星座</view>
+  <i-panel>
+    <!-- 男生星座选择 -->
+    <view>
+      <picker bindchange="select_men" value="{{index}}" range="{{array}}" header-text="请选择男生的星座">
+        <view class="p-con">
+          <view class="p-item">男生的星座</view>
+          <view class="p-item">{{men === "" ? "请选择" : men }}
+            <i-icon type="enter" color="#CCCCCC" />
+          </view>
+        </view>
+
+      </picker>
+    </view>
+
+    <!-- 女生星座选择 -->
+    <picker bindchange="select_women" value="{{index}}" range="{{array}}" header-text="请选择女生的星座">
+      <view class="p-con">
+        <view class="p-item">女生的星座</view>
+        <view class="p-item">{{women === "" ? "请选择" : women}}
+          <i-icon type="enter" color="#CCCCCC" />
+        </view>
+      </view>
+    </picker>
+  </i-panel>
+
+  <!-- 匹配按钮 -->
+  <i-button bind:click="search" type="primary" shape="circle">
+    <view style="line-height: 100%;font-size: 36rpx;padding-top: 10rpx;">查询匹配结果</view>
+  </i-button>
+</view>
+
+<!-- 匹配结果 -->
+<view wx:if="{{show}}">
+  <i-divider color="#2d8cf0" lineColor="#2d8cf0">查询结果</i-divider>
+
+  <i-card title="男生星座">
+      <view slot="content">{{Data.men}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="女生星座">
+      <view slot="content">{{Data.women}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="匹配指数">
+      <view slot="content">{{Data.zhishu}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="匹配比重">
+      <view slot="content">{{Data.bizhong}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="两情相悦指数">
+      <view slot="content">{{Data.xiangyue}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="天长地久指数">
+      <view slot="content">{{Data.tcdj}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="结果描述">
+      <view slot="content">{{Data.jieguo}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="恋爱建议">
+      <view slot="content">{{Data.lianai}}</view>
+    </i-card>
+    <view class="line"></view>
+    <i-card title="注意事项">
+      <view slot="content">{{Data.zhuyi}}</view>
+    </i-card>
+    <view class="line"></view>
+</view>

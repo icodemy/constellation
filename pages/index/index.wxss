@@ -1,0 +1,89 @@
+/**index.wxss**/
+.swiper-container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 475rpx;
+  /* background-color: aqua; */
+}
+
+swiper {
+  margin: 0;
+  padding: 0;
+  /* background-color: blueviolet; */
+  height: 100%;
+}
+
+image {
+  background-color: #1296db;
+  width: 100%;
+  height: 100%;
+}
+
+/* 分割线 */
+.order {
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.order .line {
+  display: inline-block;
+  width: 38%;
+  border-top: 3px solid #82B3D5;
+}
+
+.order .txt {
+  color: #555;
+  vertical-align: middle;
+}
+
+/* 所有星座 */
+.content {
+  /* # 定义方格的宽度 为 屏幕宽度的 33 等分， 总共 100 份  */
+  width: 33%;
+  height: 33vw;
+  box-sizing: border-box;
+  /* background-color: #99CCFF; */
+  color: #66CCFF;
+  font-size: 28rpx;
+  /* # 定义 方格中的内容 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* 子 view 垂直居中 */
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.scrollView {
+  /* 页面显示使用 flex */
+  display: flex;
+  /* flex 方向为 行 */
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* 两端对齐，方格之间等间隔 */
+  justify-content: space-between;
+}
+
+.icon {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.icon:hover {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.nav-item{
+  /* # 定义 方格中的内容 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* 子 view 垂直居中 */
+  justify-content: center;
+  margin-top: 1px;
+}

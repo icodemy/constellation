@@ -1,0 +1,8 @@
+/* pages/tabBar1/tabbar1.wxss */
+.line{
+  height: 15rpx;
+}
+
+i-card {
+  color: #1296db;
+}

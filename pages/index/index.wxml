@@ -1,0 +1,34 @@
+<!-- 首页 -->
+<!--index.wxml-->
+<!-- 放置轮播图 -->
+<view class="swiper-container">
+  <swiper circular indicator-dots indicator-active-color="#fff" indicator-color="#CCFFFF" autoplay interval="4000" duration="1000">
+    <swiper-item wx:for="{{swiperData}}" wx:key="key">
+      <image mode="aspectFit" src="{{item.path}}"></image>
+    </swiper-item>
+  </swiper>
+</view>
+
+<!-- 分割线 -->
+<view class="order">
+  <span class="line"></span>
+  <span class="txt"> 全部星座 </span>
+  <span class="line"></span>
+</view>
+
+<!-- 所有星座 -->
+<view class="scrollView">
+  <view class="content" wx:for="{{items}}" wx:key="index">
+    <navigator url="/pages/detail/detail?item={{item.descr}}" hover-class="none">
+      <view class="nav-item">
+        <image class="icon" src="{{item.icon}}"></image>
+        <text>{{item.descr}}</text>
+        <text>{{item.date}}</text>
+      </view>
+    </navigator>
+  </view>
+</view>
+
+
+
+

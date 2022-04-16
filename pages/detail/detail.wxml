@@ -1,0 +1,119 @@
+<!-- 星座详情 -->
+<!--pages/detail/detail.wxml-->
+<view style="position: relative;">
+  <view class="title">{{constellation.name}}</view>
+<view class="item-container">
+  <view class="line"></view>
+  <i-card title="日期范围">
+    <view slot="content">{{constellation.range}}</view>
+  </i-card>
+  <view class="line"></view>
+  <i-card title="特点">
+    <view slot="content">{{constellation.zxtd}}</view>
+  </i-card>
+  <view class="line"></view>
+  <i-card title="属性">
+    <view slot="content">{{constellation.sssx}}</view>
+  </i-card>
+  <view class="line"></view>
+  <i-card title="掌管宫位">
+    <view slot="content">{{constellation.zggw}}</view>
+  </i-card>
+  <view class="line"></view>
+  <i-card title="阴阳性">
+    <view slot="content">{{constellation.yysx}}</view>
+  </i-card>
+  <view class="line"></view>
+  <i-card title="最大特征">
+    <view slot="content">{{constellation.zdtz}}</view>
+  </i-card>
+  <view class="line"></view>
+  <i-card title="主管星">
+    <view slot="content">{{constellation.zgxx}}</view>
+  </i-card>
+  <view class="line"></view>
+  <i-card title="颜色">
+    <view slot="content">{{constellation.xyys}}</view>
+  </i-card>
+  <view class="line"></view>
+  <i-card title="珠宝">
+    <view slot="content">{{constellation.jssw}}</view>
+  </i-card>
+  <view class="line"></view>
+  <i-card title="幸运号码">
+    <view slot="content">{{constellation.xyhm}}</view>
+  </i-card>
+  <view class="line"></view>
+  <i-card title="金属">
+    <view slot="content">{{constellation.kyjs}}</view>
+  </i-card>
+  <view class="line"></view>
+  <i-card title="基本表现">
+    <view slot="content">{{constellation.bx}}</view>
+  </i-card>
+  <view class="line"></view>
+  <i-card title="优点">
+    <view slot="content">{{constellation.yd}}</view>
+  </i-card>
+  <view class="line"></view>
+  <i-card title="缺点">
+    <view slot="content">{{constellation.qd}}</view>
+  </i-card>
+  <view class="line"></view>
+  <i-card title="基本特质">
+    <view slot="content">{{constellation.jbtz}}</view>
+  </i-card>
+  <view class="line"></view>
+  <i-card title="具体特质">
+    <view slot="content">{{constellation.jttz}}</view>
+  </i-card>
+  <view class="line"></view>
+  <i-card title="行事风格">
+    <view slot="content">{{constellation.xsfg}}</view>
+  </i-card>
+  <view class="line"></view>
+  <i-card title="个性缺点">
+    <view slot="content">{{constellation.gxmd}}</view>
+  </i-card>
+  <view class="line"></view>
+  <i-card title="总体评价">
+    <view slot="content">{{constellation.zj}}</view>
+  </i-card>
+</view>
+<view class="line"></view>
+<view class="line"></view>
+<view class="line"></view>
+<!-- 返回首页 -->
+<button bindtap="backToIndex" style="color: #1296db;">返回首页</button>
+<view class="line"></view>
+<view class="line"></view>
+<!-- 加载中 -->
+<i-spin size="large" fix wx:if="{{ spinShow }}"></i-spin>
+</view>
+
+
+
+
+
+<!-- 
+  name	string	星座名称
+ 	range	string	星座公历日期范围
+ 	zxtd	string	特点
+ 	sssx	string	属性
+ 	zggw	string	掌管宫位
+ 	yysx	string	阴阳性
+ 	zdtz	string	最大特征
+ 	zgxx	string	主管星
+ 	xyys	string	颜色
+ 	jssw	string	珠宝
+ 	xyhm	string	幸运号码
+ 	kyjs	string	金属
+ 	bx	string	基本表现
+ 	yd	string	优点
+ 	qd	string	缺点
+ 	jbtz	string	基本特质
+ 	jttz	string	具体特质
+ 	xsfg	string	行事风格
+ 	gxmd	string	个性缺点
+ 	zj	string	总体评价 
+-->

@@ -1,0 +1,13 @@
+/* pages/detail/detail.wxss */
+.title{
+  text-align: center;
+  font-size: 60rpx;
+  font-weight: bold;
+  color: #1296db;
+}
+.line{
+  height: 15rpx;
+}
+.item-container{
+  color: #1296db;
+}
